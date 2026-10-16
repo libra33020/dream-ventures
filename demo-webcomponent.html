@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Ventures - Spline Web Component Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Spline Web Component -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+    <script type="module" crossorigin src="/assets/style-yyMw6HTU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-BRx_eXHi.css">
+  </head>
+  <body class="relative w-full h-screen overflow-hidden bg-[#F4F8FF]">
+    
+    <!-- Spline Web Component Background -->
+    <!-- We extracted the byte array from the provided link and saved it locally. -->
+    <div class="absolute inset-0 z-0">
+      <spline-viewer url="/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- UI Overlay (Glassmorphism) -->
+    <div class="relative z-10 flex flex-col justify-center h-full px-12 max-w-7xl mx-auto pointer-events-none">
+      <div class="pointer-events-auto max-w-xl glass-card p-8">
+        <h1 class="text-5xl md:text-6xl text-dark leading-tight mb-6">
+          Plan Better. <br/>
+          Move Smarter. <br/>
+          Trade Globally.
+        </h1>
+        <p class="text-lg text-muted mb-8 max-w-md">
+          Web Component integration offers better DOM integration, allowing elements to overlay the canvas while maintaining performance.
+        </p>
+        <div class="flex items-center gap-4">
+          <button class="btn-primary">Explore Solutions -></button>
+          <button class="btn-secondary">Talk to Dream Ventures</button>
+        </div>
+      </div>
+      
+      <!-- Top floating nav example -->
+      <nav class="absolute top-6 left-12 right-12 glass-card py-4 px-8 flex justify-between items-center pointer-events-auto">
+        <div class="font-jakarta font-extrabold text-xl text-primary-text">DREAM VENTURES</div>
+        <div class="flex gap-8 text-sm font-medium text-muted">
+          <a href="#" class="hover:text-primary-text transition-colors">Supply Chain & AI</a>
+          <a href="#" class="hover:text-primary-text transition-colors">Logistics & 3PL</a>
+          <a href="#" class="hover:text-primary-text transition-colors">Global Trade</a>
+          <a href="#" class="hover:text-primary-text transition-colors">About</a>
+        </div>
+      </nav>
+    </div>
+
+  </body>
+</html>

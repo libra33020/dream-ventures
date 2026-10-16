@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Solutions & Digital Transformation | Dream Ventures</title>
+    <meta name="description" content="Intelligent TMS/WMS platforms, custom software architectures, AI agents, and predictive data analytics for autonomous, data-driven supply networks." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/style-yyMw6HTU.js"></script>
+    <script type="module" crossorigin src="/assets/scroll-animate-CM8YlM9q.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-BRx_eXHi.css">
+  </head>
+  <body class="relative w-full bg-[#F4F8FF] overflow-x-hidden pt-24 flex flex-col min-h-screen">
+    
+    <!-- =========================================================================
+         Global Navigation Bar
+         ========================================================================= -->
+    <nav class="absolute top-0 left-0 right-0 z-50 py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center transition-all duration-300">
+      <div class="max-w-7xl w-full mx-auto flex justify-between items-center">
+        <a href="index.html" class="font-jakarta font-extrabold text-2xl text-primary-text flex items-center gap-2 group">
+          <svg class="w-8 h-8 text-primary transition-transform group-hover:scale-105" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span>DREAM VENTURES</span>
+        </a>
+        
+        <div class="hidden lg:flex gap-6 text-sm font-semibold text-muted items-center">
+          <a href="about.html" class="hover:text-primary-text transition-colors">About Us</a>
+          <div class="relative group">
+            <button class="text-primary-text font-bold flex items-center gap-1 py-4">
+              What We Do
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="absolute top-full left-0 w-64 bg-white/95 backdrop-blur-md border border-border rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 flex flex-col z-50">
+              <a href="supply-chain-ai.html" class="px-4 py-2 bg-blue-50 text-primary-text font-bold transition-colors">AI Solutions & Automation</a>
+              <a href="logistics-3pl.html" class="px-4 py-2 hover:bg-slate-50 hover:text-primary transition-colors">Logistics & Transportation</a>
+              <a href="supply-chain-solutions.html" class="px-4 py-2 hover:bg-slate-50 hover:text-primary transition-colors">Supply Chain Solutions</a>
+              <a href="trading-sourcing.html" class="px-4 py-2 hover:bg-slate-50 hover:text-primary transition-colors">Global Sourcing & Trading</a>
+            </div>
+          </div>
+          <a href="industries.html" class="hover:text-primary-text transition-colors">Industries</a>
+          <a href="insights.html" class="hover:text-primary-text transition-colors">Insights</a>
+          <a href="partner.html" class="hover:text-primary-text transition-colors">Become a Partner</a>
+          <a href="contact.html" class="hover:text-primary-text transition-colors">Contact Us</a>
+        </div>
+
+        <div class="hidden lg:flex gap-4">
+          <a href="contact.html" class="px-5 py-2.5 rounded-full font-bold text-sm bg-white text-dark shadow-sm border border-slate-200 hover:shadow-md transition-all">Contact Us</a>
+          <a href="contact.html#consultation" class="btn-primary py-2.5 text-sm">Request Consultation</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-dark p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle Mobile Navigation" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer Overlay & Panel -->
+    <div id="mobile-menu-drawer" class="fixed inset-0 z-[100] invisible opacity-0 pointer-events-none transition-all duration-300">
+      <div id="mobile-menu-backdrop" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300"></div>
+      <div id="mobile-menu-panel" class="absolute top-0 right-0 bottom-0 w-full max-w-sm bg-white/95 backdrop-blur-2xl shadow-2xl border-l border-blue-100 flex flex-col translate-x-full transition-transform duration-300 ease-out">
+        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+          <a href="index.html" class="font-jakarta font-extrabold text-xl text-primary-text flex items-center gap-2">
+            <svg class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>DREAM VENTURES</span>
+          </a>
+          <button id="mobile-menu-close" class="p-2 rounded-xl text-slate-500 hover:text-dark hover:bg-slate-100 transition-colors" aria-label="Close Mobile Navigation">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="flex-1 overflow-y-auto px-6 py-6 space-y-4 text-base font-semibold">
+          <a href="index.html" class="block py-2 text-dark hover:text-primary transition-colors">Home</a>
+          <a href="about.html" class="block py-2 text-dark hover:text-primary transition-colors">About Us</a>
+          <div class="py-2 border-y border-slate-100">
+            <div class="text-xs uppercase font-bold text-muted tracking-wider mb-2">Our Solutions</div>
+            <div class="space-y-2 pl-3">
+              <a href="supply-chain-ai.html" class="block py-1.5 text-sm text-primary font-bold">AI Solutions & Automation</a>
+              <a href="logistics-3pl.html" class="block py-1.5 text-sm text-slate-700 hover:text-primary transition-colors">Logistics & Transportation</a>
+              <a href="supply-chain-solutions.html" class="block py-1.5 text-sm text-slate-700 hover:text-primary transition-colors">Supply Chain Solutions</a>
+              <a href="trading-sourcing.html" class="block py-1.5 text-sm text-slate-700 hover:text-primary transition-colors">Global Sourcing & Trading</a>
+            </div>
+          </div>
+          <a href="industries.html" class="block py-2 text-dark hover:text-primary transition-colors">Industries</a>
+          <a href="insights.html" class="block py-2 text-dark hover:text-primary transition-colors">Insights</a>
+          <a href="partner.html" class="block py-2 text-dark hover:text-primary transition-colors">Become a Partner</a>
+          <a href="contact.html" class="block py-2 text-dark hover:text-primary transition-colors">Contact Us</a>
+        </div>
+        <div class="p-6 border-t border-slate-100 space-y-3 bg-slate-50/50">
+          <a href="contact.html#consultation" class="btn-primary w-full text-center block text-sm">Request Consultation</a>
+          <a href="contact.html" class="block w-full py-2.5 text-center text-sm font-bold text-dark bg-white border border-slate-200 rounded-full shadow-sm hover:bg-slate-50 transition-colors">Talk to an Expert</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="flex-grow">
+      <!-- =========================================================================
+           Hero Section
+           ========================================================================= -->
+      <section class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 hero-gradient relative border-b border-border overflow-hidden">
+        <div class="aura-glow-orb glow-orb-primary -top-20 -right-20 opacity-60 pointer-events-none"></div>
+        <div class="aura-glow-orb glow-orb-secondary -bottom-20 -left-20 opacity-50 pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto relative z-10 text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-blue-50/90 backdrop-blur-md border border-blue-200 text-primary-text font-bold text-xs uppercase tracking-wider shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            PILLAR 01 // AI & DIGITAL TRANSFORMATION
+          </div>
+          
+          <h1 class="gsap-heading text-4xl sm:text-5xl md:text-6xl text-dark mb-6 leading-[1.15] tracking-tight font-jakarta">
+            Intelligent Technologies for Autonomous, Data-Driven Supply Chains
+          </h1>
+          
+          <p class="text-lg md:text-xl font-medium text-primary-text mb-6">
+            <em>"AI | Automation | Digital Transformation"</em> &mdash; Technology is used to improve decisions&mdash;not to add complexity.
+          </p>
+          
+          <p class="text-base md:text-lg text-muted max-w-3xl mx-auto leading-relaxed mb-10 font-inter">
+            Dream Ventures equips enterprises and SMEs with intelligent TMS/WMS platforms, custom software architectures, AI agents, and real-time decision-support systems that transform fragmented operations into responsive, predictive supply networks.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="contact.html?service=ai-solutions" class="btn-primary w-full sm:w-auto">
+              <span>Discuss Your Technology Requirement</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#core-modules" class="btn-secondary w-full sm:w-auto">
+              <span>Explore AI Capabilities</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+          <!-- Hero Trust Metrics Strip -->
+          <div class="mt-14 pt-8 border-t border-blue-200/60 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+            <div class="flex items-center justify-start sm:justify-center gap-3">
+              <div class="h-10 px-3 min-w-[2.75rem] rounded-xl bg-blue-100/80 border border-blue-200 flex items-center justify-center text-primary font-bold text-xs sm:text-sm shrink-0 whitespace-nowrap shadow-xs">99.5%</div>
+              <span class="text-xs font-semibold text-slate-700 text-left">Real-Time Freight Visibility</span>
+            </div>
+            <div class="flex items-center justify-start sm:justify-center gap-3">
+              <div class="h-10 px-3 min-w-[2.75rem] rounded-xl bg-blue-100/80 border border-blue-200 flex items-center justify-center text-primary font-bold text-xs sm:text-sm shrink-0 whitespace-nowrap shadow-xs">15-25%</div>
+              <span class="text-xs font-semibold text-slate-700 text-left">Routing & Fuel Efficiency</span>
+            </div>
+            <div class="flex items-center justify-start sm:justify-center gap-3">
+              <div class="h-10 px-3 min-w-[2.75rem] rounded-xl bg-blue-100/80 border border-blue-200 flex items-center justify-center text-primary font-bold text-xs sm:text-sm shrink-0 whitespace-nowrap shadow-xs">40%</div>
+              <span class="text-xs font-semibold text-slate-700 text-left">Manual Effort Reduction</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           Section 1: Core AI Modules (Aura Glassmorphic Bento Grid)
+           ========================================================================= -->
+      <section id="core-modules" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white relative z-20" data-animate="fade-up">
+        <div class="max-w-7xl mx-auto">
+          
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <span class="glow-pill mb-4">ENTERPRISE TECHNOLOGY STACK</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4 font-jakarta">
+              Four Enterprise-Grade AI & Software Modules
+            </h2>
+            <p class="text-muted text-base md:text-lg leading-relaxed">
+              Engineered to eliminate manual bottlenecks, bridge disparate ERP systems, and empower supply chain leaders with continuous decision intelligence.
+            </p>
+          </div>
+
+          <!-- Asymmetric Bento Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10" data-animate="stagger-cards">
+            
+            <!-- Module 1: TMS / WMS & Control Tower (Span 2 Cols on lg) -->
+            <div class="lg:col-span-2 aura-glass rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(79,156,249,0.2)] animate-item flex flex-col justify-between">
+              <div class="absolute -right-16 -bottom-16 w-56 h-56 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-500 pointer-events-none"></div>
+              
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-blue-600/10 border border-primary/30 flex items-center justify-center text-primary text-2xl shadow-inner transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="7" height="9" x="3" y="3" rx="1"/>
+                      <rect width="7" height="5" x="14" y="3" rx="1"/>
+                      <rect width="7" height="9" x="14" y="12" rx="1"/>
+                      <rect width="7" height="5" x="3" y="16" rx="1"/>
+                    </svg>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-primary-text font-bold text-xs uppercase tracking-wider">Module 01 // Core Engine</span>
+                </div>
+
+                <h3 class="text-2xl md:text-3xl font-extrabold text-dark mb-3 font-jakarta group-hover:text-primary transition-colors">TMS / WMS & Digital Control Tower</h3>
+                <p class="text-muted leading-relaxed mb-6 text-sm md:text-base">
+                  Cloud-native freight management and warehouse execution platforms providing unified real-time visibility across carrier fleets, inventory staging, and delivery milestones.
+                </p>
+
+                <!-- Key Capabilities Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Real-Time GPS/IoT Tracking:</strong> Milestone telemetry across carrier fleets.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Multi-Carrier Dispatch:</strong> Automated dynamic allocation & rate benchmarking.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Payload Optimization:</strong> Route heuristics minimizing empty dead-heads.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Exception Triage:</strong> Instant delay alerts & proactive mitigation workflows.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-muted">
+                <span class="font-semibold text-primary">Automated Freight Invoice Auditing</span>
+                <span class="font-bold text-primary hover:text-primary-deep flex items-center gap-1 group-hover:translate-x-1 transition-transform">Single Glass Pane Visibility &rarr;</span>
+              </div>
+            </div>
+
+            <!-- Module 2: Custom Software & Enterprise Solutions (Span 1 Col) -->
+            <div class="aura-glass rounded-3xl p-8 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-item flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary text-xl shadow-sm transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m18 16 4-4-4-4"/>
+                      <path d="m6 8-4 4 4 4"/>
+                      <path d="m14.5 4-5 16"/>
+                    </svg>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-muted font-bold text-xs uppercase">Module 02</span>
+                </div>
+
+                <h3 class="text-xl font-bold text-dark mb-2 font-jakarta group-hover:text-primary transition-colors">Custom Software & Digital Solutions</h3>
+                <p class="text-sm text-muted leading-relaxed mb-6">
+                  Tailored software architectures engineered to eliminate legacy system bottlenecks, bridge data gaps, and automate cross-functional handoffs.
+                </p>
+
+                <ul class="space-y-2.5 text-xs md:text-sm text-slate-700 mb-6">
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>ERP Middleware:</strong> Connectors for SAP, Oracle, Tally & Dynamics.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>Supplier & Client Portals:</strong> Self-service booking & ASN tracking.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>Mobile e-POD Apps:</strong> Barcode/RFID scanner integrations.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>EDI & Webhook Hubs:</strong> Automated real-time data bridges.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center text-primary font-semibold text-xs group-hover:translate-x-1 transition-transform">
+                <span>Enterprise API Architecture &rarr;</span>
+              </div>
+            </div>
+
+            <!-- Module 3: AI Agents & Cognitive BI (Span 1 Col) -->
+            <div class="aura-glass rounded-3xl p-8 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-item flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary text-xl shadow-sm transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 8V4H8"/>
+                      <rect width="16" height="12" x="4" y="8" rx="2"/>
+                      <path d="M2 14h2"/>
+                      <path d="M20 14h2"/>
+                      <path d="M15 13v2"/>
+                      <path d="M9 13v2"/>
+                    </svg>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-100 text-muted font-bold text-xs uppercase">Module 03</span>
+                </div>
+
+                <h3 class="text-xl font-bold text-dark mb-2 font-jakarta group-hover:text-primary transition-colors">AI Agents & Cognitive BI</h3>
+                <p class="text-sm text-muted leading-relaxed mb-6">
+                  Autonomous AI agents and intelligent bots that monitor operational workflows, answer customer tracking queries, and automate repetitive tasks.
+                </p>
+
+                <ul class="space-y-2.5 text-xs md:text-sm text-slate-700 mb-6">
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>24/7 Conversational AI:</strong> Instant status & tracking lookup.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>Document OCR Bots:</strong> Parsing BoLs, packing lists & invoices.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>Predictive ETA Engine:</strong> Weather, traffic & port dwell models.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span><strong>Rate Negotiation Bots:</strong> Quote comparison across carrier pools.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center text-primary font-semibold text-xs group-hover:translate-x-1 transition-transform">
+                <span>Autonomous Workflow Engines &rarr;</span>
+              </div>
+            </div>
+
+            <!-- Module 4: Data & Analytics Engine (Span 2 Cols on lg) -->
+            <div class="lg:col-span-2 aura-glass rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(79,156,249,0.2)] animate-item flex flex-col justify-between">
+              <div class="absolute -right-16 -bottom-16 w-56 h-56 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-600/20 transition-all duration-500 pointer-events-none"></div>
+              
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-blue-600/10 border border-primary/30 flex items-center justify-center text-primary text-2xl shadow-inner transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 3v18h18"/>
+                      <path d="M18 17V9"/>
+                      <path d="M13 17V5"/>
+                      <path d="M8 17v-3"/>
+                    </svg>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-primary-text font-bold text-xs uppercase tracking-wider">Module 04 // Intelligence</span>
+                </div>
+
+                <h3 class="text-2xl md:text-3xl font-extrabold text-dark mb-3 font-jakarta group-hover:text-primary transition-colors">Data & Analytics Engine</h3>
+                <p class="text-muted leading-relaxed mb-6 text-sm md:text-base">
+                  Predictive analytics and business intelligence dashboards converting raw transactional logs into strategic decision advantage.
+                </p>
+
+                <!-- Analytics Capabilities Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Lane-Level Spend Analytics:</strong> Cost-per-kg spend analysis & benchmarking.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Carrier SLA Scorecards:</strong> Multi-vendor performance rankings & punctuality.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Inventory Velocity Heatmaps:</strong> Stockout risk modeling & SKU velocity tiers.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5 text-xs md:text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                    <span><strong>Demand Anomaly Alerts:</strong> Clustering algorithms detecting irregular order surges.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-muted">
+                <span class="font-semibold text-primary">Granular Spend Transparency</span>
+                <span class="font-bold text-primary hover:text-primary-deep flex items-center gap-1 group-hover:translate-x-1 transition-transform">Executive BI Dashboards &rarr;</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           Section 2: 4-Stage Decision Flow (Data Ingestion to Action)
+           ========================================================================= -->
+      <section id="decision-flow" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-[#F4F8FF] border-t border-border relative z-20" data-animate="fade-up">
+        <div class="max-w-7xl mx-auto">
+          
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <span class="glow-pill mb-4">THE OPERATING FRAMEWORK</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4 font-jakarta">
+              The 4-Stage Technology Decision Engine
+            </h2>
+            <p class="text-muted text-base md:text-lg leading-relaxed">
+              Derived directly from our core operating methodology: turning multi-source operational feeds into automated, closed-loop supply chain execution.
+            </p>
+          </div>
+
+          <!-- Step Cards Grid with visual progression -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10" data-animate="stagger-cards">
+            
+            <!-- Stage 01: Data -->
+            <div class="aura-glass rounded-3xl p-7 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-item flex flex-col justify-between">
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-400 to-primary"></div>
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-xl bg-blue-50 text-primary-text font-extrabold text-sm flex items-center justify-center border border-blue-100 font-jakarta">01</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-muted">Ingestion</span>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 font-jakarta">01 // DATA</h3>
+                <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-3">Multi-Source Feeds</p>
+                <p class="text-xs md:text-sm text-muted leading-relaxed mb-5">
+                  Continuous ingestion and normalization of operational streams across disparate enterprise nodes.
+                </p>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Sales Orders & Forecasts</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Inventory & WMS Logs</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Freight Rates & Lane Data</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Carrier Milestone Feeds</li>
+                </ul>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-primary flex items-center justify-between">
+                <span>Ingest &rarr; Normalize</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+              </div>
+            </div>
+
+            <!-- Stage 02: AI / Analytics -->
+            <div class="aura-glass rounded-3xl p-7 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-item flex flex-col justify-between">
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-blue-600"></div>
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-xl bg-blue-50 text-primary-text font-extrabold text-sm flex items-center justify-center border border-blue-100 font-jakarta">02</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-muted">Mining</span>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 font-jakarta">02 // AI & ANALYTICS</h3>
+                <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-3">Patterns & Scenarios</p>
+                <p class="text-xs md:text-sm text-muted leading-relaxed mb-5">
+                  Automated pattern recognition, risk modeling, and multi-variable scenario simulation.
+                </p>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Pattern Recognition</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Anomaly & Bottleneck Triage</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Predictive Transit Delays</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Scenario Simulation Engine</li>
+                </ul>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-primary flex items-center justify-between">
+                <span>Predict &rarr; Simulate</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+              </div>
+            </div>
+
+            <!-- Stage 03: Decision -->
+            <div class="aura-glass rounded-3xl p-7 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-item flex flex-col justify-between">
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-xl bg-blue-50 text-primary-text font-extrabold text-sm flex items-center justify-center border border-blue-100 font-jakarta">03</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-muted">Intelligence</span>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 font-jakarta">03 // DECISION</h3>
+                <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-3">Optimization Logic</p>
+                <p class="text-xs md:text-sm text-muted leading-relaxed mb-5">
+                  Dynamic algorithmic decision support recommending the optimal path forward in real time.
+                </p>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Dynamic Route Planning</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Carrier & Fleet Allocation</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Safety Stock Prioritization</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Multi-Drop Load Consolidation</li>
+                </ul>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-primary flex items-center justify-between">
+                <span>Plan &rarr; Allocate</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              </div>
+            </div>
+
+            <!-- Stage 04: Action -->
+            <div class="aura-glass rounded-3xl p-7 relative overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-item flex flex-col justify-between">
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-indigo-600 to-emerald-500"></div>
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-xl bg-blue-50 text-primary-text font-extrabold text-sm flex items-center justify-center border border-blue-100 font-jakarta">04</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-muted">Execution</span>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2 font-jakarta">04 // ACTION</h3>
+                <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-3">TMS Control Tower</p>
+                <p class="text-xs md:text-sm text-muted leading-relaxed mb-5">
+                  Automated execution through TMS, closed-loop SLA tracking, and continuous learning.
+                </p>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Automated Dispatch Execution</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Real-Time Milestone Tracking</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Vendor SLA Scorecarding</li>
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Continuous Model Refinement</li>
+                </ul>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-emerald-600 flex items-center justify-between">
+                <span>Execute &rarr; Improve</span>
+                <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           Section 3: Problem-Solution-Outcome Matrix & Key Performance Metrics
+           ========================================================================= -->
+      <section id="outcomes-matrix" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white border-t border-border relative z-20" data-animate="fade-up">
+        <div class="max-w-7xl mx-auto">
+          
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <span class="glow-pill mb-4">MEASURABLE VALUE</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4 font-jakarta">
+              Problem, Solution & Quantifiable Business Outcomes
+            </h2>
+            <p class="text-muted text-base md:text-lg leading-relaxed">
+              Discover how Dream Ventures replaces legacy supply chain bottlenecks with intelligent automation, delivering benchmarked efficiency gains.
+            </p>
+          </div>
+
+          <!-- Problem-Solution-Outcome 3-Column Matrix -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8" data-animate="stagger-cards">
+            
+            <!-- Column 1: Legacy Problem -->
+            <div class="aura-glass rounded-3xl p-8 border-t-4 border-t-rose-400 relative animate-item flex flex-col justify-between">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-600 font-bold text-xs uppercase tracking-wider mb-6">
+                  Industry Problem
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4 font-jakarta">Fragmented Software Silos & Blind Spots</h3>
+                <p class="text-muted text-sm leading-relaxed mb-6">
+                  Traditional supply chain teams struggle with disconnected spreadsheets, lack of real-time visibility, and reactive firefighting.
+                </p>
+                <ul class="space-y-3 text-xs md:text-sm text-slate-700">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-rose-500 font-bold text-sm">✕</span>
+                    <span>Siloed ERPs, WMS, and detached carrier tracking portals.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-rose-500 font-bold text-sm">✕</span>
+                    <span>Zero real-time freight tracking and late exception discovery.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-rose-500 font-bold text-sm">✕</span>
+                    <span>Error-prone manual data entry and invoice auditing.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-rose-500 font-bold text-sm">✕</span>
+                    <span>Unoptimized carrier dispatch leading to excessive freight spend.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-8 pt-4 border-t border-slate-100 text-xs font-semibold text-rose-600">
+                Costly Operational Inefficiencies
+              </div>
+            </div>
+
+            <!-- Column 2: Dream Ventures Solution -->
+            <div class="aura-glass rounded-3xl p-8 border-t-4 border-t-primary relative animate-item flex flex-col justify-between shadow-md">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-primary-text font-bold text-xs uppercase tracking-wider mb-6">
+                  Dream Ventures Solution
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4 font-jakarta">Unified Cloud Architecture & AI Agents</h3>
+                <p class="text-muted text-sm leading-relaxed mb-6">
+                  A centralized digital control tower integrating predictive analytics, automated document OCR, and dynamic routing engines.
+                </p>
+                <ul class="space-y-3 text-xs md:text-sm text-slate-700">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-primary font-bold text-sm">✓</span>
+                    <span>Unified cloud TMS/WMS layer with bidirectional ERP sync.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-primary font-bold text-sm">✓</span>
+                    <span>Predictive AI exception engine & proactive rerouting alerts.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-primary font-bold text-sm">✓</span>
+                    <span>Document OCR bots parsing BoLs, invoices, and customs manifests.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-primary font-bold text-sm">✓</span>
+                    <span>Algorithmic load allocation and route heuristics.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-8 pt-4 border-t border-slate-100 text-xs font-semibold text-primary">
+                Predictive & Automated Decision Making
+              </div>
+            </div>
+
+            <!-- Column 3: Quantifiable Outcome -->
+            <div class="aura-glass rounded-3xl p-8 border-t-4 border-t-emerald-500 relative animate-item flex flex-col justify-between">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 font-bold text-xs uppercase tracking-wider mb-6">
+                  Quantifiable Outcome
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4 font-jakarta">Autonomous Speed & Lower Total Spend</h3>
+                <p class="text-muted text-sm leading-relaxed mb-6">
+                  Measurable operational transformation verified through rigorous carrier SLA monitoring and continuous cost benchmarks.
+                </p>
+                <ul class="space-y-3 text-xs md:text-sm text-slate-700">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-emerald-500 font-bold text-sm">★</span>
+                    <span><strong>99.5% End-to-End Visibility</strong> across all domestic & global lanes.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-emerald-500 font-bold text-sm">★</span>
+                    <span><strong>15–25% Transport Efficiency</strong> via route heuristics & load cubing.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-emerald-500 font-bold text-sm">★</span>
+                    <span><strong>40% Reduction</strong> in manual dispatch time & exception latency.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-emerald-500 font-bold text-sm">★</span>
+                    <span><strong>Zero Blind Spots</strong> through 24/7 automated telemetry.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-8 pt-4 border-t border-slate-100 text-xs font-semibold text-emerald-600">
+                Immediate ROI & Operational Clarity
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live GSAP Numerical Counters Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16" data-animate="stagger-cards">
+            
+            <!-- Stat Item 1 -->
+            <div class="aura-glass rounded-2xl p-6 text-center animate-item hover:border-primary/50 transition-all flex flex-col justify-between">
+              <div>
+                <div class="text-4xl md:text-5xl font-extrabold text-primary font-jakarta mb-2">
+                  <span class="gsap-counter" data-animate="counter" data-target="99.5" data-decimals="1" data-prefix="" data-suffix="%">99.5%</span>
+                </div>
+                <div class="text-sm font-bold text-dark font-jakarta">End-to-End Visibility</div>
+                <div class="text-xs text-muted mt-1">Across carrier fleets & warehouse nodes</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-primary">Real-Time Corridors</div>
+            </div>
+
+            <!-- Stat Item 2 -->
+            <div class="aura-glass rounded-2xl p-6 text-center animate-item hover:border-primary/50 transition-all flex flex-col justify-between">
+              <div>
+                <div class="text-4xl md:text-5xl font-extrabold text-primary font-jakarta mb-2">
+                  <span class="gsap-counter" data-animate="counter" data-target="25" data-decimals="0" data-prefix="15-" data-suffix="%">15-25%</span>
+                </div>
+                <div class="text-sm font-bold text-dark font-jakarta">Routing & Payload Gain</div>
+                <div class="text-xs text-muted mt-1">Improved vehicle capacity utilization</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-primary">Payload Efficiency</div>
+            </div>
+
+            <!-- Stat Item 3 -->
+            <div class="aura-glass rounded-2xl p-6 text-center animate-item hover:border-primary/50 transition-all flex flex-col justify-between">
+              <div>
+                <div class="text-4xl md:text-5xl font-extrabold text-primary font-jakarta mb-2">
+                  <span class="gsap-counter" data-animate="counter" data-target="40" data-decimals="0" data-prefix="" data-suffix="%">40%</span>
+                </div>
+                <div class="text-sm font-bold text-dark font-jakarta">Manual Effort Reduction</div>
+                <div class="text-xs text-muted mt-1">Faster dispatch & automated OCR entry</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-primary">Operational Speed</div>
+            </div>
+
+            <!-- Stat Item 4 -->
+            <div class="aura-glass rounded-2xl p-6 text-center animate-item hover:border-primary/50 transition-all flex flex-col justify-between">
+              <div>
+                <div class="text-4xl md:text-5xl font-extrabold text-primary font-jakarta mb-2">
+                  <span class="gsap-counter" data-animate="counter" data-target="100" data-decimals="0" data-prefix="" data-suffix="%">100%</span>
+                </div>
+                <div class="text-sm font-bold text-dark font-jakarta">Digital Audit Trail</div>
+                <div class="text-xs text-muted mt-1">Automated freight invoice verification</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-primary">Zero Blind Spots</div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           Section 4: Stylized Aura Dark Mesh CTA Section
+           ========================================================================= -->
+      <section id="cta-section" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#F4F8FF] relative z-20" data-animate="fade-up">
+        <div class="max-w-7xl mx-auto cta-obsidian p-8 sm:p-12 md:p-16 relative overflow-hidden shadow-2xl rounded-3xl border border-slate-700/60">
+          
+          <!-- Ambient Radial Glow Orbs -->
+          <div class="aura-glow-orb glow-orb-primary -top-24 -right-24 pointer-events-none opacity-40"></div>
+          <div class="aura-glow-orb glow-orb-secondary -bottom-24 -left-24 pointer-events-none opacity-30"></div>
+          <div class="aura-glow-orb glow-orb-cyan top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20"></div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Text Content -->
+            <div class="lg:col-span-8 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                ENGAGEMENT STAGE 04 // DIGITIZE
+              </div>
+              
+              <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight font-jakarta">
+                Ready to Modernize Your Supply Chain Technology?
+              </h2>
+              
+              <p class="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed font-inter">
+                Let our solution architects design an agile, AI-powered digital infrastructure tailored to your exact operational requirements. Eliminate spreadsheet bottlenecks and achieve autonomous operational clarity.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-4 text-xs md:text-sm text-slate-300 font-medium">
+                <span class="flex items-center gap-1.5"><strong class="text-primary font-bold">✓</strong> TMS / WMS Readiness Audit</span>
+                <span class="flex items-center gap-1.5"><strong class="text-primary font-bold">✓</strong> Custom ERP Integration Roadmap</span>
+                <span class="flex items-center gap-1.5"><strong class="text-primary font-bold">✓</strong> Dedicated Solutions Architect</span>
+              </div>
+            </div>
+
+            <!-- Right Action Buttons -->
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 justify-end">
+              <a href="contact.html?service=ai-solutions" class="btn-primary py-4 px-8 text-base shadow-[0_0_35px_-5px_rgba(79,156,249,0.6)] hover:shadow-[0_0_50px_rgba(79,156,249,0.8)] text-center">
+                <span>Discuss Your Technology Requirement</span>
+                <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="contact.html#consultation" class="btn-obsidian-ghost py-4 px-8 text-base text-center">
+                Speak With a Solutions Architect
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =========================================================================
+         Footer
+         ========================================================================= -->
+    <footer class="bg-[#0F172A] text-slate-400 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-800 mt-auto">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="font-jakarta font-extrabold text-2xl text-white mb-6">DREAM VENTURES</div>
+          <p class="text-sm leading-relaxed mb-6">Plan Better. Move Smarter. Trade Globally. Premium supply chain coordination and AI optimization.</p>
+          <div class="text-sm text-slate-500">Based in India. Operating Globally.</div>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-6 font-jakarta">Solutions</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="supply-chain-ai.html" class="text-primary-text font-bold transition-colors">AI Solutions & Automation</a></li>
+            <li><a href="logistics-3pl.html" class="hover:text-primary-text transition-colors">Logistics & Transportation</a></li>
+            <li><a href="supply-chain-solutions.html" class="hover:text-primary-text transition-colors">Supply Chain Solutions</a></li>
+            <li><a href="trading-sourcing.html" class="hover:text-primary-text transition-colors">Global Sourcing & Trading</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 font-jakarta">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="about.html" class="hover:text-primary-text transition-colors">About Us</a></li>
+            <li><a href="industries.html" class="hover:text-primary-text transition-colors">Industries</a></li>
+            <li><a href="partner.html" class="hover:text-primary-text transition-colors">Become a Partner</a></li>
+            <li><a href="insights.html" class="hover:text-primary-text transition-colors">Insights</a></li>
+            <li><a href="contact.html" class="hover:text-primary-text transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 font-jakarta">Disclaimer</h4>
+          <p class="text-xs leading-relaxed text-slate-500">
+            Dream Ventures operates as a strategic coordinator and technology enabler. Logistics, warehousing, freight, and customs clearance services are executed through our qualified network of licensed partners. We do not claim ownership of physical carrier fleets.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs">
+        <p>&copy; 2026 Dream Ventures. All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- GSAP 3.12.5 Core & ScrollTrigger CDN Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
